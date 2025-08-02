@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:todolist_clean/core/constans/app_routes.dart';
 
 
 void main() {
@@ -9,7 +10,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
 
-      getPages: [],
+      getPages: AppRoutes.pages,
    
     );
   }
