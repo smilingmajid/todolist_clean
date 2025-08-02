@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:todolist_clean/core/constans/app_routes.dart';
+
+import 'core/constans/app_routes.dart';
+import 'core/theme/app_theme.dart';
 
 
 void main() {
@@ -14,9 +16,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+
+      
       title: 'ToDoList App',
-
-
+      theme: AppTheme.defaultTheme,
       getPages: AppRoutes.pages,
    
     );
