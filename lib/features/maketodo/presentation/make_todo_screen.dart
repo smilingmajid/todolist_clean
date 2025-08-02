@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
     
-class MakeTodoScreen extends StatelessWidget {
+class MakeTodoScreen extends GetView {
 
   const MakeTodoScreen({ super.key });
   
