@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../features/maketodo/presentation/make_todo_screen.dart';
 class AppRoutes {
   static const String makeTodo = '/makeTodo';
   static const String todoList = '/todoList';
@@ -10,7 +12,7 @@ class AppRoutes {
 GetPage(
 
   name: AppRoutes.makeTodo,
-  page: ()=>Container(),
+  page: ()=>MakeTodoScreen(),
   binding: null,
 
 ),
