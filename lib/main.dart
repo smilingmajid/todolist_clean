@@ -17,10 +17,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
 
-      
+      debugShowCheckedModeBanner: false,
       title: 'ToDoList App',
       theme: AppTheme.defaultTheme,
       getPages: AppRoutes.pages,
+      initialRoute: AppRoutes.makeTodo,
    
     );
   }
