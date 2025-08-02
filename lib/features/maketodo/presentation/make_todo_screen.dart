@@ -13,13 +13,22 @@ class MakeTodoScreen extends GetView<MakeTodoController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(),
+            TextField(
+              controller: controller.titleCtrl,
+              decoration: const InputDecoration(hintText: "title"),
+            ),
             SizedBox(height: 20),
-            TextField(),
+            TextField(
+              controller: controller.descriptionCtrl,
+              decoration: const InputDecoration(hintText: "description"),
+            ),
             SizedBox(height: 20),
-            ElevatedButton(onPressed: () {
-              
-            }, child: Text("Create ToDo")),
+            ElevatedButton(
+              onPressed: () {
+                controller.createTodoAction();
+              },
+              child: Text("Create ToDo"),
+            ),
           ],
         ),
       ),
