@@ -5,7 +5,7 @@ class AppRoutes {
   static const String makeTodo = '/makeTodo';
   static const String todoList = '/todoList';
 
-  List<GetPage> get pages => [
+ static List<GetPage> get pages => [
 
 GetPage(
 
