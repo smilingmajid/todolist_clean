@@ -17,7 +17,9 @@ class MakeTodoScreen extends GetView<MakeTodoController> {
             SizedBox(height: 20),
             TextField(),
             SizedBox(height: 20),
-            ElevatedButton(onPressed: () {}, child: Text("Create ToDo")),
+            ElevatedButton(onPressed: () {
+              
+            }, child: Text("Create ToDo")),
           ],
         ),
       ),
