@@ -10,7 +10,7 @@ import '../bloc/todo_bloc.dart';
 import '../widgets/todo_list.dart';
 
 class TodoPage extends StatelessWidget {
-  const TodoPage({Key? key}) : super(key: key);
+  const TodoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,7 @@ class TodoPage extends StatelessWidget {
 class _AddTodoDialog extends StatelessWidget {
   final TextEditingController controller = TextEditingController();
 
-  _AddTodoDialog({super.key});
+  _AddTodoDialog();
 
   @override
   Widget build(BuildContext context) {
