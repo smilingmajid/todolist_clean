@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../controllers/todo_controller.dart';
     
 class TodoListScreen extends StatelessWidget {
