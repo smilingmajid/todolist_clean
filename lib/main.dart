@@ -4,10 +4,10 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 import 'core/constans/app_routes.dart';
 import 'core/theme/app_theme.dart';
+import 'core/translations/app_translations.dart';
 import 'features/todolist/data/models/todo_model.dart';
 import 'features/todolist/data/datasources/todo_local_data_source.dart';
 import 'features/todolist/data/repositories/todo_repository_impl.dart';
-
 import 'features/todolist/presentation/controllers/todo_controller.dart';
 
 void main() async {
