@@ -1,22 +1,38 @@
-
-import '../../domin/entities/new_todo.dart';
+import '../../domin/entities/new_todo_entity.dart';
 import '../../domin/repositories/make_todo_repository.dart';
 import '../datasources/make_todo_local_datasource.dart';
 import '../models/new_todo_model.dart';
-import 'package:uuid/uuid.dart';
 
-class MakeTodoRepositoryImpl implements MakeTodoRepository {
-  final MakeTodoLocalDataSource localDataSource;
+class NewTodoRepositoryImpl implements NewTodoRepository {
+  final NewTodoLocalDataSource localDataSource;
 
-  MakeTodoRepositoryImpl(this.localDataSource);
+  NewTodoRepositoryImpl(this.localDataSource);
 
   @override
-  Future<void> createTodo(NewTodo todo) async {
+  Future<void> addTodo(NewTodoEntity todo) async {
     final model = NewTodoModel(
-      id: const Uuid().v4(),
+      id: todo.id,
       title: todo.title,
       description: todo.description,
+      isDone: todo.isDone,
     );
     await localDataSource.addTodo(model);
+  }
+
+  @override
+  List<NewTodoEntity> getAllTodos() {
+    return localDataSource.getAllTodos().map((todo) {
+      return NewTodoEntity(
+        id: todo.id,
+        title: todo.title,
+        description: todo.description,
+        isDone: todo.isDone,
+      );
+    }).toList();
+  }
+
+  @override
+  Future<void> deleteTodo(String id) async {
+    await localDataSource.deleteTodo(id);
   }
 }
