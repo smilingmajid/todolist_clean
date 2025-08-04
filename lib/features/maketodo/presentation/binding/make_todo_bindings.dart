@@ -6,7 +6,7 @@ import '../../../maketodo/data/models/new_todo_model.dart';
 import '../../../maketodo/data/repositories/make_todo_repository_impl.dart';
 
 import '../../domin/usecases/create_todo_usecase.dart';
-import '../controller/make_todo_controller.dart';
+import '../controller/new_todo_controller.dart';
 
 class MakeTodoBindings extends Bindings {
   @override

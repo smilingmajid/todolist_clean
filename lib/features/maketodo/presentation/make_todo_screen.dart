@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'controller/make_todo_controller.dart';
+import 'controller/new_todo_controller.dart';
 
 class MakeTodoScreen extends GetView<MakeTodoController> {
   const MakeTodoScreen({super.key});
