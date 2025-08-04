@@ -1,5 +1,7 @@
-import '../entities/new_todo.dart';
+import '../entities/new_todo_entity.dart';
 
-abstract class MakeTodoRepository {
-  Future<void> createTodo(NewTodo todo);
+abstract class NewTodoRepository {
+  Future<void> addTodo(NewTodoEntity todo);
+  List<NewTodoEntity> getAllTodos();
+  Future<void> deleteTodo(String id);
 }
