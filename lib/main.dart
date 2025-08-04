@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
 import 'core/constans/app_routes.dart';
 import 'core/theme/app_theme.dart';
 import 'core/translations/app_translations.dart';
@@ -38,7 +37,7 @@ class MyApp extends StatelessWidget {
 
       themeMode: ThemeMode.system,
       getPages: AppRoutes.pages,
-      initialRoute: AppRoutes.makeTodo,
+      initialRoute: AppRoutes.splash,
       translations: AppTranslations(),
       locale: const Locale('en', 'US'),
     );
