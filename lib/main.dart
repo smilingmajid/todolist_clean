@@ -4,6 +4,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'core/constans/app_routes.dart';
 import 'core/theme/app_theme.dart';
 import 'core/translations/app_translations.dart';
+import 'features/maketodo/data/models/new_todo_model.dart';
 import 'features/todolist/data/models/todo_model.dart';
 import 'features/todolist/data/datasources/todo_local_data_source.dart';
 import 'features/todolist/data/repositories/todo_repository_impl.dart';
@@ -16,6 +17,8 @@ void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(TodoModelAdapter());
   final todoBox = await Hive.openBox<TodoModel>('todos');
+Hive.registerAdapter(NewTodoModelAdapter());
+await Hive.openBox<NewTodoModel>('todos');
 
   // Dependency Injection
   final localDataSource = TodoLocalDataSource(todoBox);
